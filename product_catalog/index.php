@@ -1,7 +1,7 @@
 <?php
 require('../model/database.php');
-require('../model/product_db.php');
-require('../model/category_db.php');
+require('../model/currencies_db.php');
+require('../model/currency_offerings_db.php');
 
 $action = filter_input(INPUT_POST, 'action');
 if ($action == NULL) {
@@ -17,7 +17,7 @@ if ($action == 'list_products') {
     if ($category_id == NULL || $category_id == FALSE) {
         $category_id = 1;
     }
-    $categories = get_categories();
+    $currencies = get_categories();
     $category_name = get_category_name($category_id);
     $products = get_products_by_category($category_id);
 
@@ -29,7 +29,7 @@ if ($action == 'list_products') {
         $error = 'Missing or incorrect product id.';
         include('../errors/error.php');
     } else {
-        $categories = get_categories();
+        $currencies = get_categories();
         $product = get_product($product_id);
 
         // Get product data

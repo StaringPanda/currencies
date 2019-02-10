@@ -1,7 +1,7 @@
 <?php
 require('../model/database.php');
-require('../model/product_db.php');
-require('../model/category_db.php');
+require('../model/currencies_db.php');
+require('../model/currency_offerings_db.php');
 
 $action = filter_input(INPUT_POST, 'action');
 if ($action == NULL) {
@@ -21,7 +21,7 @@ if ($action == 'list_products') {
     
     // Get product and category data
     $category_name = get_category_name($category_id);
-    $categories = get_categories();
+    $currencies = get_categories();
     $products = get_products_by_category($category_id);
 
     // Display the product list
@@ -71,7 +71,7 @@ if ($action == 'list_products') {
         header("Location: .?category_id=$category_id");
     }
 } else if ($action == 'show_add_form') {
-    $categories = get_categories();
+    $currencies = get_categories();
     include('product_add.php');
 } else if ($action == 'add_product') {
     $category_id = filter_input(INPUT_POST, 'category_id', 
@@ -88,7 +88,7 @@ if ($action == 'list_products') {
         header("Location: .?category_id=$category_id");
     }
 } else if ($action == 'list_categories') {
-    $categories = get_categories();
+    $currencies = get_categories();
     include('category_list.php');
 } else if ($action == 'add_category') {
     $name = filter_input(INPUT_POST, 'name');

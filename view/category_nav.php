@@ -1,12 +1,12 @@
 
         <nav>
             <ul>
-                <!-- display links for all categories -->
-                <?php foreach($categories as $category) : ?>
+                <!-- display links for all currencies -->
+                <?php foreach($currencies as $currency) : ?>
                 <li>
-                    <a href="?category_id=<?php 
-                              echo $category['categoryID']; ?>">
-                        <?php echo $category['categoryName']; ?>
+                    <a href="?currency_id=<?php 
+                              echo $currency['currencyID']; ?>">
+                        <?php echo $currency['currencyTitle']; ?>
                     </a>
                 </li>
                 <?php endforeach; ?>

@@ -1,14 +1,14 @@
 <?php include '../view/header.php'; ?>
 <main>
     <h1>Add Product</h1>
-    <form action="index.php" method="post" id="add_product_form">
-        <input type="hidden" name="action" value="add_product">
+    <form action="index.php" method="post" id="add_currency_form">
+        <input type="hidden" name="action" value="add_currency">
 
         <label>Category:</label>
-        <select name="category_id">
-        <?php foreach ( $categories as $category ) : ?>
-            <option value="<?php echo $category['categoryID']; ?>">
-                <?php echo $category['categoryName']; ?>
+        <select name="currency_id">
+        <?php foreach ( $currencies as $currency ) : ?>
+            <option value="<?php echo $currency['categoryID']; ?>">
+                <?php echo $currency['currencyName']; ?>
             </option>
         <?php endforeach; ?>
         </select>
@@ -27,11 +27,11 @@
         <br>
 
         <label>&nbsp;</label>
-        <input type="submit" value="Add Product">
+        <input type="submit" value="Add Currency">
         <br>
     </form>
     <p class="last_paragraph">
-        <a href="index.php?action=list_products">View Product List</a>
+        <a href="index.php?action=list_currencies">View Currency List</a>
     </p>
 
 </main>
