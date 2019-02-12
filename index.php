@@ -7,7 +7,7 @@
             <a href="product_manager">Currency Manager</a>
         </li>
         <li>
-            <a href="product_catalog">Currency Catalog</a>
+            <a href="currency_catalog">Currency Catalog</a>
         </li>
     </ul>
     <div>

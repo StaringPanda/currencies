@@ -7,35 +7,35 @@ $action = filter_input(INPUT_POST, 'action');
 if ($action == NULL) {
     $action = filter_input(INPUT_GET, 'action');
     if ($action == NULL) {
-        $action = 'list_products';
+        $action = 'list_currencies';
     }
 } 
 
-if ($action == 'list_products') {
-    $category_id = filter_input(INPUT_GET, 'category_id', 
+if ($action == 'list_currencies') {
+    $currency_offering_id = filter_input(INPUT_GET, 'currency_offering_id', 
             FILTER_VALIDATE_INT);
-    if ($category_id == NULL || $category_id == FALSE) {
-        $category_id = 1;
+    if ($currency_offering_id == NULL || $currency_offering_id == FALSE) {
+        $currency_offering_id = 1;
     }
-    $currencies = get_categories();
-    $category_name = get_category_name($category_id);
-    $products = get_products_by_category($category_id);
+    $currencies = get_currency_offerings();
+    $currency_name = get_category_name($currency_offering_id);
+    $currency = get_currencies_by_currency_offering($currency_offering_id);
 
-    include('product_list.php');
-} else if ($action == 'view_product') {
-    $product_id = filter_input(INPUT_GET, 'product_id', 
+    include('currency_list.php');
+} else if ($action == 'view_currency') {
+    $currency_id = filter_input(INPUT_GET, 'currency_id', 
             FILTER_VALIDATE_INT);   
-    if ($product_id == NULL || $product_id == FALSE) {
-        $error = 'Missing or incorrect product id.';
+    if ($currency_id == NULL || $currency_id == FALSE) {
+        $error = 'Missing or incorrect currency id.';
         include('../errors/error.php');
     } else {
-        $currencies = get_categories();
-        $product = get_product($product_id);
+        $currencies = get_currency_offerings();
+        $currency = get_currency($currency_id);
 
         // Get product data
-        $code = $product['productCode'];
-        $name = $product['productName'];
-        $list_price = $product['listPrice'];
+        $code = $currency['currencyCode'];
+        $name = $currency['currencyName'];
+        $list_price = $currency['listPrice'];
 
         // Calculate discounts
         $discount_percent = 30;  // 30% off for all web orders
@@ -50,7 +50,7 @@ if ($action == 'list_products') {
         $image_filename = '../images/' . $code . '.png';
         $image_alt = 'Image: ' . $code . '.png';
 
-        include('product_view.php');
+        include('currency_view.php');
     }
 }
 ?>

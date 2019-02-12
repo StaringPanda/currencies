@@ -1,8 +1,8 @@
-<?php include '../view/header.php'; ?>
+<?php include '../includes/header.php'; ?>
 <main>
     <aside>
         <h1>Categories</h1>
-        <?php include '../view/category_nav.php'; ?>
+        <?php include '../includes/category_nav.php'; ?>
     </aside>
     <section>
         <h1><?php echo $name; ?></h1>
@@ -20,8 +20,8 @@
                  (You save $<?php echo $discount_amount_f; ?>)</p>
             <form action="<?php echo '../cart' ?>" method="post">
                 <input type="hidden" name="action" value="add">
-                <input type="hidden" name="product_id"
-                       value="<?php echo $product_id; ?>">
+                <input type="hidden" name="currency_id"
+                       value="<?php echo $currency_id; ?>">
                 <b>Quantity:</b>
                 <input id="quantity" type="text" name="quantity" value="1" size="2">
                 <br><br>
@@ -30,4 +30,4 @@
         </div>
     </section>
 </main>
-<?php include '../view/footer.php'; ?>
+<?php include '../includes/footer.php'; ?>

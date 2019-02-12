@@ -20,27 +20,27 @@
                 <th>&nbsp;</th>
                 <th>&nbsp;</th>
             </tr>
-            <?php foreach ($products as $product) : ?>
+            <?php foreach ($products as $currency) : ?>
             <tr>
-                <td><?php echo $product['productCode']; ?></td>
-                <td><?php echo $product['productName']; ?></td>
-                <td class="right"><?php echo $product['listPrice']; ?></td>
+                <td><?php echo $currency['productCode']; ?></td>
+                <td><?php echo $currency['productName']; ?></td>
+                <td class="right"><?php echo $currency['listPrice']; ?></td>
                 <td><form action="." method="post">
                     <input type="hidden" name="action"
                            value="show_edit_form">
                     <input type="hidden" name="product_id"
-                           value="<?php echo $product['productID']; ?>">
+                           value="<?php echo $currency['productID']; ?>">
                     <input type="hidden" name="category_id"
-                           value="<?php echo $product['categoryID']; ?>">
+                           value="<?php echo $currency['categoryID']; ?>">
                     <input type="submit" value="Edit">
                 </form></td>
                 <td><form action="." method="post">
                     <input type="hidden" name="action"
                            value="delete_product">
                     <input type="hidden" name="product_id"
-                           value="<?php echo $product['productID']; ?>">
+                           value="<?php echo $currency['productID']; ?>">
                     <input type="hidden" name="category_id"
-                           value="<?php echo $product['categoryID']; ?>">
+                           value="<?php echo $currency['categoryID']; ?>">
                     <input type="submit" value="Delete">
                 </form></td>
             </tr>

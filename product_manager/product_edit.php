@@ -6,26 +6,26 @@
         <input type="hidden" name="action" value="update_product">
 
         <input type="hidden" name="product_id"
-               value="<?php echo $product['productID']; ?>">
+               value="<?php echo $currency['productID']; ?>">
 
         <label>Category ID:</label>
         <input type="category_id" name="category_id"
-               value="<?php echo $product['categoryID']; ?>">
+               value="<?php echo $currency['categoryID']; ?>">
         <br>
 
         <label>Code:</label>
         <input type="input" name="code"
-               value="<?php echo $product['productCode']; ?>">
+               value="<?php echo $currency['productCode']; ?>">
         <br>
 
         <label>Name:</label>
         <input type="input" name="name"
-               value="<?php echo $product['productName']; ?>">
+               value="<?php echo $currency['productName']; ?>">
         <br>
 
         <label>List Price:</label>
         <input type="input" name="price"
-               value="<?php echo $product['listPrice']; ?>">
+               value="<?php echo $currency['listPrice']; ?>">
         <br>
 
         <label>&nbsp;</label>

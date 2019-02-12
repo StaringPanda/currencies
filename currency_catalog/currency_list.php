@@ -1,4 +1,4 @@
-<?php include '../view/header.php'; ?>
+<?php include '../includes/header.php'; ?>
 <main>
     <aside>
         <!-- display a list of categories -->
@@ -9,15 +9,15 @@
         <h1><?php echo $category_name; ?></h1>
         <ul class="nav">
             <!-- display links for products in selected category -->
-            <?php foreach ($products as $product) : ?>
+            <?php foreach ($products as $currency) : ?>
             <li>
                 <a href="?action=view_product&amp;product_id=<?php 
-                          echo $product['productID']; ?>">
-                    <?php echo $product['productName']; ?>
+                          echo $currency['productID']; ?>">
+                    <?php echo $currency['productName']; ?>
                 </a>
             </li>
             <?php endforeach; ?>
         </ul>
     </section>
 </main>
-<?php include '../view/footer.php'; ?>
+<?php include '../includes/footer.php'; ?>
