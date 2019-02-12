@@ -1,13 +1,13 @@
-<?php include '../view/header.php'; ?>
+<?php include '../includes/header.php'; ?>
 <main>
-    <h1>Add Product</h1>
+    <h1>Add Currency</h1>
     <form action="index.php" method="post" id="add_currency_form">
         <input type="hidden" name="action" value="add_currency">
 
         <label>Category:</label>
         <select name="currency_id">
         <?php foreach ( $currencies as $currency ) : ?>
-            <option value="<?php echo $currency['categoryID']; ?>">
+            <option value="<?php echo $currency['currencyOfferingID']; ?>">
                 <?php echo $currency['currencyName']; ?>
             </option>
         <?php endforeach; ?>
@@ -35,4 +35,4 @@
     </p>
 
 </main>
-<?php include '../view/footer.php'; ?>
+<?php include '../includes/footer.php'; ?>

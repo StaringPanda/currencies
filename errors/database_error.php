@@ -1,4 +1,4 @@
-<?php include '../view/header.php'; ?>
+<?php include '../includes/header.php'; ?>
 <main>
     <h1 class="top">Database Error</h1>
     <p>There was an error connecting to the database.</p>
@@ -7,4 +7,4 @@
     <p>Error message: <?php echo $error_message; ?></p>
     <p>&nbsp;</p>
 </main>
-<?php include '../view/footer.php'; ?>
+<?php include '../includes/footer.php'; ?>

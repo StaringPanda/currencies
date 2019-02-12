@@ -1,4 +1,4 @@
-<?php include '../view/header.php'; ?>
+<?php include '../includes/header.php'; ?>
 <main>
 
     <h1>Currency Offerings List</h1>
@@ -37,4 +37,4 @@
     <p><a href="index.php?action=list_currencies">List Currency Offerings</a></p>
 
 </main>
-<?php include '../view/footer.php'; ?>
+<?php include '../includes/footer.php'; ?>

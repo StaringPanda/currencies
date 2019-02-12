@@ -3,7 +3,7 @@
 <!-- the head section -->
 <head>
     <title>Currency Exchange</title>
-    <link href="../main.css" rel="stylesheet" type="text/css"/>
+    <link href="../styles/main.css" rel="stylesheet" type="text/css"/>
 </head>
 
 <!-- the body section -->

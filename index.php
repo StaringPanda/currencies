@@ -1,10 +1,10 @@
-<?php include 'view/header.php'; ?>
+<?php include 'includes/header.php'; ?>
 <link href="main.css" rel="stylesheet" type="text/css"/>
 <main>
     <h1>Menu</h1>
     <ul>
         <li>
-            <a href="product_manager">Currency Manager</a>
+            <a href="currency_manager">Currency Manager</a>
         </li>
         <li>
             <a href="currency_catalog">Currency Catalog</a>
@@ -18,4 +18,4 @@
     </div>
     
 </main>
-<?php include 'view/footer.php'; ?>
+<?php include 'includes/footer.php'; ?>

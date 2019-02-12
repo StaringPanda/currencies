@@ -3,17 +3,17 @@
     <aside>
         <!-- display a list of categories -->
         <h2>Categories</h2>
-        <?php include '../view/category_nav.php'; ?>        
+        <?php include '../includes/category_nav.php'; ?>        
     </aside>
     <section>
-        <h1><?php echo $category_name; ?></h1>
+        <h1><?php echo $currency_name; ?></h1>
         <ul class="nav">
             <!-- display links for products in selected category -->
-            <?php foreach ($products as $currency) : ?>
+            <?php foreach ($currencies as $currency) : ?>
             <li>
-                <a href="?action=view_product&amp;product_id=<?php 
-                          echo $currency['productID']; ?>">
-                    <?php echo $currency['productName']; ?>
+                <a href="?action=view_currency&amp;currency_id=<?php 
+                          echo $currency['currencyID']; ?>">
+                    <?php echo $currency['currencyName']; ?>
                 </a>
             </li>
             <?php endforeach; ?>
