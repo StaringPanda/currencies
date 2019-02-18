@@ -22,8 +22,8 @@
             </tr>
             <?php foreach ($currencies as $currency) : ?>
             <tr>
-                <td><?php echo $currency['productCode']; ?></td>
-                <td><?php echo $currency['productName']; ?></td>
+                <td><?php echo $currency['currencyOfferingID']; ?></td>
+                <td><?php echo $currency['currencyOfferingTitle']; ?></td>
                 <td class="right"><?php echo $currency['listPrice']; ?></td>
                 <td><form action="." method="post">
                     <input type="hidden" name="action"
