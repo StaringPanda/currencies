@@ -6,7 +6,7 @@
         <?php include '../includes/category_nav.php'; ?>        
     </aside>
     <section>
-        <h1><?php echo $currency_name; ?></h1>
+        <h1><?php echo $currency_offering_name; ?></h1>
         <ul class="nav">
             <!-- display links for products in selected category -->
             <?php foreach ($currencies as $currency) : ?>

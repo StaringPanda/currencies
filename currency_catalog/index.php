@@ -17,9 +17,9 @@ if ($action == 'list_currencies') {
     if ($currency_offering_id == NULL || $currency_offering_id == FALSE) {
         $currency_offering_id = 1;
     }
-    $currencies = get_currency_offerings();
-    $currency_name = get_category_name($currency_offering_id);
-    $currency = get_currencies_by_currency_offering($currency_offering_id);
+    $currency_offerings = get_currency_offerings();
+    $currency_offering_name = get_currency_offerings_name($currency_offering_id);
+    $currencies = get_currencies_by_currency_offering($currency_offering_id);
 
     include('currency_list.php');
 } else if ($action == 'view_currency') {
@@ -29,10 +29,10 @@ if ($action == 'list_currencies') {
         $error = 'Missing or incorrect currency id.';
         include('../errors/error.php');
     } else {
-        $currencies = get_currency_offerings();
+        $currency_offerings = get_currency_offerings();
         $currency = get_currency($currency_id);
 
-        // Get product data
+        // Get currency data
         $code = $currency['currencyCode'];
         $name = $currency['currencyName'];
         $list_price = $currency['listPrice'];

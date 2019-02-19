@@ -45,14 +45,14 @@ function delete_currency($currency_id) {
     $stmt->closeCursor();
 }
 
-function add_currency($currency_id, $code, $name, $price) {
+function add_currency($currency_offering_id, $code, $name, $price) {
     global $db;
     $query = 'INSERT INTO currencies
-                 (currencyID, currencyCode, currencyName, listPrice)
+                 (currencyOfferingID, currencyCode, currencyName, listPrice)
               VALUES
-                 (:currency_id, :code, :name, :price)';
+                 (:currency_offering_id, :code, :name, :price)';
     $stmt = $db->prepare($query);
-    $stmt->bindValue(':currency_id', $currency_id);
+    $stmt->bindValue(':currency_offering_id', $currency_offering_id);
     $stmt->bindValue(':code', $code);
     $stmt->bindValue(':name', $name);
     $stmt->bindValue(':price', $price);

@@ -21,8 +21,8 @@ if ($action == 'list_currencies') {
     
     // Get currency and currency offering data
     $currency_offering_name = get_currency_offerings_name($currency_offering_id);
-    $currencies = get_currency_offerings();
-    $products = get_currencies_by_currency_offering($currency_offering_id);
+    $currency_offerings = get_currency_offerings();
+    $currencies = get_currencies_by_currency_offering($currency_offering_id);
 
     // Display the currency list
     include('currency_list.php');
@@ -67,7 +67,7 @@ if ($action == 'list_currencies') {
         $error = "Missing or incorrect currency id or currency offering id.";
         include('../errors/error.php');
     } else { 
-        delete_product($currency_id);
+        delete_currency($currency_id);
         header("Location: .?currency_offering_id=$currency_offering_id");
     }
 } else if ($action == 'show_add_form') {
@@ -88,8 +88,8 @@ if ($action == 'list_currencies') {
         header("Location: .?currency_offering_id=$currency_offering_id");
     }
 } else if ($action == 'list_currency_offerings') {
-    $currencies = get_currency_offerings();
-    include('currency_list.php');
+    $currency_offerings = get_currency_offerings();
+    include('currency_offerings_list.php');
 } else if ($action == 'add_currency_offering') {
     $name = filter_input(INPUT_POST, 'name');
 

@@ -8,7 +8,7 @@
         <input type="hidden" name="currency_id"
                value="<?php echo $currency['currencyID']; ?>">
 
-        <label>Category ID:</label>
+        <label>Currency Offering ID:</label>
         <input type="currency_offering_id" name="currency_offering_id"
                value="<?php echo $currency['currencyOfferingID']; ?>">
         <br>

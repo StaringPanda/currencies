@@ -5,9 +5,7 @@ function get_currency_offerings() {
               ORDER BY currencyOfferingID';
     $stmt = $db->prepare($query);
     $stmt->execute();
-    
-    $results = $stmt->fetchAll();
-    return $results;
+    return $stmt;
 }
 
 function get_currency_offerings_name($currency_offering_id) {

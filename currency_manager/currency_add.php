@@ -5,10 +5,10 @@
         <input type="hidden" name="action" value="add_currency">
 
         <label>Category:</label>
-        <select name="currency_id">
-        <?php foreach ( $currencies as $currency ) : ?>
-            <option value="<?php echo $currency['currencyOfferingID']; ?>">
-                <?php echo $currency['currencyName']; ?>
+        <select name="currency_offering_id">
+        <?php foreach ( $currency_offerings as $currency_offering ) : ?>
+            <option value="<?php echo $currency_offering['currencyOfferingID']; ?>">
+                <?php echo $currency_offering['currencyOfferingTitle']; ?>
             </option>
         <?php endforeach; ?>
         </select>
