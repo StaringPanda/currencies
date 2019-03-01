@@ -1,6 +1,7 @@
 #                                               Currency Exchange
 
-![alt text] (https://github.com/StaringPanda/currencies/edit/currenciesV2/READMEimages/Currency_exchange.PNG)
+![alt text][logo] 
+[logo]: https://github.com/StaringPanda/currencies/edit/currenciesV2/READMEimages/Currency_exchange.PNG
 
 
 1st Push,
