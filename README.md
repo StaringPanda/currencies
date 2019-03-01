@@ -17,3 +17,6 @@ Some of this sites functionality will include:
 * Buliding an investment portfolio
 * Discussing current trends
 * Analyising the market
+
+### Feedback
+Please feel free to give feedback to **staringpanda@nomail.com** without user feedback this site cannot grow or improve 
