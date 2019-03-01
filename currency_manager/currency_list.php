@@ -39,7 +39,7 @@
                            value="delete_currency">
                     <input type="hidden" name="currency_id"
                            value="<?php echo $currency['currencyID']; ?>">
-                    <input type="hidden" name="category_id"
+                    <input type="hidden" name="currency_offering_id"
                            value="<?php echo $currency['currencyOfferingID']; ?>">
                     <input type="submit" value="Delete">
                 </form></td>

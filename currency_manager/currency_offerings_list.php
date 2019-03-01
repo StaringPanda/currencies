@@ -33,7 +33,8 @@
         <input type="input" name="name">
         <input type="submit" value="Add">
     </form>
-
+    <br>
+    
     <p><a href="index.php?action=list_currencies">List Currency Offerings</a></p>
 
 </main>

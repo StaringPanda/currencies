@@ -67,11 +67,12 @@ if ($action == 'list_currencies') {
         $error = "Missing or incorrect currency id or currency offering id.";
         include('../errors/error.php');
     } else { 
+        delete_currency_image($currency_id);
         delete_currency($currency_id);
         header("Location: .?currency_offering_id=$currency_offering_id");
     }
 } else if ($action == 'show_add_form') {
-    $currencies = get_currency_offerings();
+    $currency_offerings = get_currency_offerings();
     include('currency_add.php');
 } else if ($action == 'add_currency') {
     $currency_offering_id = filter_input(INPUT_POST, 'currency_offering_id', 
@@ -79,11 +80,15 @@ if ($action == 'list_currencies') {
     $code = filter_input(INPUT_POST, 'code');
     $name = filter_input(INPUT_POST, 'name');
     $price = filter_input(INPUT_POST, 'price', FILTER_VALIDATE_FLOAT);
+    $imgFile = $_FILES['image']['name'];
+    $tmp_dir = $_FILES['image']['tmp_name'];
+    $imgSize = $_FILES['image']['size'];
     if ($currency_offering_id == NULL || $currency_offering_id == FALSE || $code == NULL || 
-            $name == NULL || $price == NULL || $price == FALSE) {
+            $name == NULL || $price == NULL || $price == FALSE || $imgFile == null) {
         $error = "Invalid currency data. Check all fields and try again.";
         include('../errors/error.php');
     } else { 
+        upload_currency_image($imgFile, $tmp_dir, $imgSize, $code);
         add_currency($currency_offering_id, $code, $name, $price);
         header("Location: .?currency_offering_id=$currency_offering_id");
     }

@@ -8,5 +8,5 @@
 
 <!-- the body section -->
 <body>
-<header><h1>Currency Exchange</h1></header>
+    <a href='../index.php'><header><h1>Currency Exchange</h1></header></a>
        

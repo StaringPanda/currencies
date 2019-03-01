@@ -77,4 +77,34 @@ function update_currency($currency_id, $currency_offering_id, $code, $name, $pri
     $stmt->execute();
     $stmt->closeCursor();
 }
+
+function upload_currency_image($imgFile, $tmp_dir, $imgSize, $code){
+        $upload_dir = '../images/';
+        $imgExt = strtolower(pathinfo($imgFile, PATHINFO_EXTENSION));
+        $valid_extensions = array('png');
+        $currencyPic = $code.".".$imgExt;
+            if (in_array($imgExt, $valid_extensions)){
+                if ($imgSize < 5000000){
+                    move_uploaded_file($tmp_dir, $upload_dir.$currencyPic);
+                }else{
+                    $error = "File is too large, max file size is 5MB.";
+                    include('../errors/error.php');
+                }
+            }else{
+                $error = "Not a valid file extension, must be png";
+                include('../errors/error.php');
+            }
+}
+
+function delete_currency_image($currency_id) {
+    global $db;
+    $query = 'SELECT * FROM currencies
+              WHERE currencyID = :currency_id';
+    $stmt = $db->prepare($query);
+    $stmt->bindValue(':currency_id', $currency_id);
+    $stmt->execute();
+    $row = $stmt->fetch();
+    $stmt->closeCursor();
+    unlink("../images/".$row['currencyCode'].".png");
+}
 ?>
