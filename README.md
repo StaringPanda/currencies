@@ -1,7 +1,6 @@
 <h1 align="center">Currency Exchange</h1>
 <p align="center">(Diaclaimer! This site is still a work in progress and is not fully complete)</p> 
-![alt text][logo] 
-[logo]: https://github.com/StaringPanda/currencies/edit/currenciesV2/READMEimages/Currency_exchange.PNG
+<img src="https://github.com/StaringPanda/currencies/edit/currenciesV2/READMEimages/Currency_exchange.PNG">
 
 
 ### Introduction
