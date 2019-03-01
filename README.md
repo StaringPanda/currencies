@@ -1,9 +1,7 @@
 <h1 align="center">Currency Exchange</h1>
-<p align="center">(Diaclaimer! This site is still a work in progress and is not fully complete)</p> 
+<p align="center">(Disclaimer! This site is still a work in progress and is not fully complete)</p> 
 
-![Currency_exchange][page]
-[page]: https://github.com/StaringPanda/currencies/edit/currenciesV2/READMEimages/Currency_exchange.PNG
-
+![alttext](/READMEimages/Currency_exchange.PNG)
 
 ### Introduction
 The Currency Exchange is a site where people can come to buy, sell and trade different currencies. People can trade in the Fiat 
