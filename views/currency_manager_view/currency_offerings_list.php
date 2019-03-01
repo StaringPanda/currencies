@@ -1,4 +1,4 @@
-<?php include '../includes/header.php'; ?>
+<?php include '../views/partials/header.php'; ?>
 <main>
 
     <h1>Currency Offerings List</h1>
@@ -12,7 +12,7 @@
             <td><?php echo $currency_offering['currencyOfferingTitle']; ?></td>
             <td>
                 <form id="delete_currency_form"
-                      action="index.php" method="post">
+                      action="../controller/currency_manager_controller.php" method="post">
                     <input type="hidden" name="action" value="delete_currency_offering">
                     <input type="hidden" name="currency_offering_id"
                            value="<?php echo $currency_offering['currencyOfferingID']; ?>">
@@ -26,7 +26,7 @@
 
     <h2>Add Currency Offering</h2>
     <form id="add_currency_form"
-          action="index.php" method="post">
+          action="../controller/currency_manager_controller.php" method="post">
         <input type="hidden" name="action" value="add_currency_offering">
 
         <label>Name:</label>
@@ -35,7 +35,7 @@
     </form>
     <br>
     
-    <p><a href="index.php?action=list_currencies">List Currency Offerings</a></p>
+    <p><a href="../controller/currency_manager_controller.php?action=list_currencies">List Currency Offerings</a></p>
 
 </main>
-<?php include '../includes/footer.php'; ?>
+<?php include '../views/partials/footer.php'; ?>

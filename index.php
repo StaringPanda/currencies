@@ -1,13 +1,13 @@
-<?php include 'includes/header.php'; ?>
+<?php include 'views/partials/header.php'; ?>
 <link href="styles/main.css" rel="stylesheet" type="text/css"/>
 <main>
     <h1>Menu</h1>
     <ul>
         <li>
-            <a href="currency_manager">Currency Manager</a>
+            <a href="./controller/currency_manager_controller.php">Currency Manager</a>
         </li>
         <li>
-            <a href="currency_catalog">Currency Catalog</a>
+            <a href="./controller/currency_catalog_controller.php">Currency Catalog</a>
         </li>
     </ul>
     <div>
@@ -18,4 +18,4 @@
     </div>
     
 </main>
-<?php include 'includes/footer.php'; ?>
+<?php include 'views/partials/footer.php'; ?>

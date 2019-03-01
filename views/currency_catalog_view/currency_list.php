@@ -1,9 +1,9 @@
-<?php include '../includes/header.php'; ?>
+<?php include '../views/partials/header.php'; ?>
 <main>
     <aside>
         <!-- display a list of categories -->
-        <h2>Categories</h2>
-        <?php include '../includes/category_nav.php'; ?>        
+        <h2>Currency offerings</h2>
+        <?php include '../views/partials/category_nav.php'; ?>        
     </aside>
     <section>
         <h1><?php echo $currency_offering_name; ?></h1>
@@ -20,4 +20,4 @@
         </ul>
     </section>
 </main>
-<?php include '../includes/footer.php'; ?>
+<?php include '../views/partials/footer.php'; ?>

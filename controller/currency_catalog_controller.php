@@ -21,7 +21,7 @@ if ($action == 'list_currencies') {
     $currency_offering_name = get_currency_offerings_name($currency_offering_id);
     $currencies = get_currencies_by_currency_offering($currency_offering_id);
 
-    include('currency_list.php');
+    include('../views/currency_catalog_view/currency_list.php');
 } else if ($action == 'view_currency') {
     $currency_id = filter_input(INPUT_GET, 'currency_id', 
             FILTER_VALIDATE_INT);   
@@ -50,7 +50,7 @@ if ($action == 'list_currencies') {
         $image_filename = '../images/' . $code . '.png';
         $image_alt = 'Image: ' . $code . '.png';
 
-        include('currency_view.php');
+        include('../views/currency_catalog_view/currency_view.php');
     }
 }
 ?>

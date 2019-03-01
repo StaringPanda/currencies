@@ -25,7 +25,7 @@ if ($action == 'list_currencies') {
     $currencies = get_currencies_by_currency_offering($currency_offering_id);
 
     // Display the currency list
-    include('currency_list.php');
+    include('../views/currency_manager_view/currency_list.php');
 } else if ($action == 'show_edit_form') {
     $currency_id = filter_input(INPUT_POST, 'currency_id', 
             FILTER_VALIDATE_INT);
@@ -34,7 +34,7 @@ if ($action == 'list_currencies') {
         include('../errors/error.php');
     } else { 
         $currency = get_currency($currency_id);
-        include('currency_edit.php');
+        include('../views/currency_manager_view/currency_edit.php');
     }
 } else if ($action == 'update_currency') {
     $currency_id = filter_input(INPUT_POST, 'currency_id', 
@@ -55,7 +55,7 @@ if ($action == 'list_currencies') {
         update_currency($currency_id, $currency_offering_id, $code, $name, $price);
 
         // Display the currency List page for the current currency offering
-        header("Location: .?currency_offering_id=$currency_offering_id");
+        header("Location: currency_manager_controller.php?currency_offering_id=$currency_offering_id");
     }
 } else if ($action == 'delete_currency') {
     $currency_id = filter_input(INPUT_POST, 'currency_id', 
@@ -69,11 +69,11 @@ if ($action == 'list_currencies') {
     } else { 
         delete_currency_image($currency_id);
         delete_currency($currency_id);
-        header("Location: .?currency_offering_id=$currency_offering_id");
+        header("Location: currency_manager_controller.php?currency_offering_id=$currency_offering_id");
     }
 } else if ($action == 'show_add_form') {
     $currency_offerings = get_currency_offerings();
-    include('currency_add.php');
+    include('../views/currency_manager_view/currency_add.php');
 } else if ($action == 'add_currency') {
     $currency_offering_id = filter_input(INPUT_POST, 'currency_offering_id', 
             FILTER_VALIDATE_INT);
@@ -90,11 +90,11 @@ if ($action == 'list_currencies') {
     } else { 
         upload_currency_image($imgFile, $tmp_dir, $imgSize, $code);
         add_currency($currency_offering_id, $code, $name, $price);
-        header("Location: .?currency_offering_id=$currency_offering_id");
+        header("Location: currency_manager_controller.php?currency_offering_id=$currency_offering_id");
     }
 } else if ($action == 'list_currency_offerings') {
     $currency_offerings = get_currency_offerings();
-    include('currency_offerings_list.php');
+    include('../views/currency_manager_view/currency_offerings_list.php');
 } else if ($action == 'add_currency_offering') {
     $name = filter_input(INPUT_POST, 'name');
 
@@ -104,12 +104,12 @@ if ($action == 'list_currencies') {
         include('../errors/error.php');
     } else {
         add_currency_offering($name);
-        header('Location: .?action=list_currency_offering');  // display the Currency Offerings List page
+        header('Location: currency_manager_controller.php?action=list_currency_offerings');  // display the Currency Offerings List page
     }
 } else if ($action == 'delete_currency_offering') {
     $currency_offering_id = filter_input(INPUT_POST, 'currency_offering_id', 
             FILTER_VALIDATE_INT);
     delete_currency_offering($currency_offering_id);
-    header('Location: .?action=list_currency_offerings');      // display the Currency Offerings List page
+    header('Location: currency_manager_controller.php?action=list_currency_offerings');      // display the Currency Offerings List page
 }
 ?>

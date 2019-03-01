@@ -1,15 +1,15 @@
-<?php include '../includes/header.php'; ?>
+<?php include '../views/partials/header.php'; ?>
 <main>
     <aside>
-        <h1>Categories</h1>
-        <?php include '../includes/category_nav.php'; ?>
+        <h1>Currency Offerings</h1>
+        <?php include '../views/partials/category_nav.php'; ?>
     </aside>
     <section>
         <h1><?php echo $name; ?></h1>
         <div id="left_column">
             <p>
                 <img src="<?php echo $image_filename; ?>"
-                    alt="<?php echo $image_alt; ?>">
+                    alt="<?php echo $image_alt; ?>" width="100px" height="100px">
             </p>
         </div>
 
@@ -30,4 +30,4 @@
         </div>
     </section>
 </main>
-<?php include '../includes/footer.php'; ?>
+<?php include '../views/partials/footer.php'; ?>

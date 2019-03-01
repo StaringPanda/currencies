@@ -1,7 +1,7 @@
-<?php include '../includes/header.php'; ?>
+<?php include '../views/partials/header.php'; ?>
 <main>
     <h1>Edit Currency</h1>
-    <form action="index.php" method="post" id="add_currency_form">
+    <form action="../controller/currency_manager_controller.php" method="post" id="add_currency_form">
 
         <input type="hidden" name="action" value="update_currency">
 
@@ -32,7 +32,7 @@
         <input type="submit" value="Save Changes">
         <br>
     </form>
-    <p><a href="index.php?action=list_currencies">View Currency List</a></p>
+    <p><a href="../controller/currency_manager_controller.php?action=list_currencies">View Currency List</a></p>
 
 </main>
-<?php include '../includes/footer.php'; ?>
+<?php include '../views/partials/footer.php'; ?>
